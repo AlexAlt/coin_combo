@@ -7,7 +7,7 @@ get('/') do
   erb(:index)
 end
 
-get('/change') do
-  @change_value = params.fetch("money_input")
+get('/coin_combo') do
+  @change_value = params.fetch('money_input').to_i.coin_combo()
   erb(:change)
 end
